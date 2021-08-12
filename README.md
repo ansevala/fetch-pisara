@@ -9,9 +9,10 @@ Get blood supply information in Finland.
 optional arguments:
   -h, --help            show this help message and exit
   -t {A+,A-,O+,O-,B+,B-,AB+,AB-}, --type {A+,A-,O+,O-,B+,B-,AB+,AB-}
-                        Blood type
+                        Blood group filter
   -f {text,json}, --format {text,json}
                         Output format
   -l {fi,en}, --lang {fi,en}
-  --brief
+                        Output language for text
+  --brief               Use simpler output format for text
 ```

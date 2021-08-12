@@ -30,12 +30,14 @@ parser = argparse.ArgumentParser(description='Get blood supply information in Fi
 parser.add_argument('-t', '--type', dest='type', type=str.upper,
                     choices=["A+", "A-", "O+", "O-",
                              "B+", "B-", "AB+", "AB-"],
-                    help='Blood type')
+                    help='Blood group filter')
 parser.add_argument('-f', '--format', dest='format', choices=['text', 'json'],
                     default='text', help='Output format')
 parser.add_argument('-l', '--lang', dest='lang', choices=['fi', 'en'],
-                    type=str.lower, default='fi')
-parser.add_argument('--brief', action='store_true')
+                    type=str.lower, default='fi',
+                    help='Output language for text')
+parser.add_argument('--brief', action='store_true',
+                    help='Use simpler output format for text')
 args = parser.parse_args()
 
 class Supply(Enum):
